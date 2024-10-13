@@ -1,13 +1,15 @@
 import '../styles/contenido.css'
 
-export function Contenido ({ planet,description,distance,time,change  }){
+export function Contenido ({ planet,description,distance,time,cambio  }){
+
+
     return(
-        <div className="h-auto w-full  flex flex-col items-center pt-6  ">
+        <div className="reactComponent h-auto w-full  flex flex-col items-center pt-6  ">
             <nav className="w-full h-[2.5rem]  text-[1rem] uppercase flex  justify-around [letter-spacing:.1rem] [font-family:var(--Barlow)]">
-                <a href="#" onClick={change} className="h-full " >moon</a>
-                <a href="#" onClick={change} className="h-full ">mars</a>
-                <a href="#" onClick={change} className="h-full ">europa</a>
-                <a href="#" onClick={change} className="h-full ">titan</a>
+                <a href="#" onClick={cambio} className="h-full " >moon</a>
+                <a href="#" onClick={cambio} className="h-full ">mars</a>
+                <a href="#" onClick={cambio} className="h-full ">europa</a>
+                <a href="#" onClick={cambio} className="h-full ">titan</a>
             </nav>
             <div className='w-full h-[17.9rem] border-gray-500 border-b-[2.5px] flex flex-col  items-center justify-around'>
                 <h3 className='text-6xl uppercase'>{planet}</h3>

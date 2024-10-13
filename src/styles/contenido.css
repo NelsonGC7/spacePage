@@ -1,5 +1,8 @@
-a:hover{
+ 
+.reactComponent{
+    a:hover{
         animation: borderAnimation 0.5s ease-in forwards;
+    }
 }
 
 @keyframes borderAnimation{
