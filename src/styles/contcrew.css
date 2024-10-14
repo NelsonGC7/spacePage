@@ -11,6 +11,7 @@ p{
     align-items: center;
     gap: 1rem;
     div{
+        cursor: pointer;
         width: .8rem;
         height: .8rem;
         border-radius: 50%;
