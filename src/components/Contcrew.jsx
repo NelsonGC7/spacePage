@@ -1,4 +1,5 @@
 import '../styles/contcrew.css'
+import { useState } from 'react';
   const  crew =[
     {
       "name": "Douglas Hurley",
@@ -38,21 +39,31 @@ import '../styles/contcrew.css'
     }
   ]
 
-
-
-const change = null;
+  
 export function Contcrew () {
+  const [filters,setFilter] = useState(crew[0])
 
+  const change = (e)=>{
+    const fader = e.target.parentElement;
+    const children  = Array.from(fader.children);
+    const index = children.indexOf(e.target);
+    crew.filter( crw =>{
+      const subIndex =  crew.indexOf(crw)
+      if(subIndex === index){
+        console.log(crw)
+        setFilter(crw)
+      }
+    })
+    console.log(index)
+  }
 
   return (
    <section className="h-[88%] w-full  overflow-y-scroll px-6 text-center  flex flex-col items-center z-0  gap-12">
         <div className='min-h-[300px] w-full flex flex-col items-center justify-between'>
             <h1 className="text-white text-center w-auto  text-xl [font-weigth:300]  [font-family:var(--Barlow)] uppercase [letter-spacing:.2rem]"> <strong className="text-gray-400 mr-2">02</strong>Meet your crew</h1>
-            <h4 className='text-2xl text-gray-400 uppercase'>Commander</h4>
-            <h3 className='text-3xl text-white uppercase font-ligth'>Douglas Hurley</h3>
-            <p className='[font-family:var(--Barlow)] text-[1.2rem]'>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
-            and former NASA astronaut. He launched into space for the third time as 
-            commander of Crew Dragon Demo-2.</p>
+            <h4 className='text-2xl text-gray-400 uppercase'>{filters.role}</h4>
+            <h3 className='text-3xl text-white uppercase font-ligth'>{filters.name}</h3>
+            <p className='[font-family:var(--Barlow)] text-[1.2rem]'>{filters.bio}</p>
             <figure className="figuritas">
                 <div onClick={change} className='btonActive' ></div>
                 <div onClick={change}></div>
@@ -61,7 +72,7 @@ export function Contcrew () {
             </figure>
         </div>
         <div  className='h-[600px] w-full  figurota '>
-            <img src="/assets/crew/image-douglas-hurley.webp" className='' alt="" />
+            <img src={filters.images.webp} className='' alt="" />
         </div>
    </section>
   );

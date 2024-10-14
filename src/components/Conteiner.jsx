@@ -60,8 +60,6 @@ export default function Conteiner ({}){
         let selector = e.target.innerText
         const filtro  = destinations.filter((destino)=> destino.name.toLowerCase() ===  selector.toLowerCase());
         setFiltros(filtro)
-
-        console.log(filtro[0])
     }
     return(
         
