@@ -28,6 +28,20 @@ import Mylayout from '../layouts/Mylayout.astro';
 	}
 
 </style>
+<script is:inline>
+    document.querySelector('img[alt="logo-hamburger"]').addEventListener('click', ()=>{
+        document.querySelector('ul').classList.remove('navDeactive')
+        document.querySelector('ul').classList.add('navActive');
+        setTimeout(()=>{
+            document.querySelector('ul').classList.remove('navActive')
+            document.querySelector('ul').classList.add('navDeactive');
+        },3000)
+    })
+    document.querySelector('img[alt="icon-close"]').addEventListener('click', ()=>{
+        document.querySelector('ul').classList.remove('navActive')
+        document.querySelector('ul').classList.add('navDeactive');
+    })
+</script>
 
 
 
