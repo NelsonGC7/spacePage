@@ -1,0 +1,42 @@
+
+cite{
+    text-transform: none;
+}
+p{
+    color: rgba(255, 255, 255, 0.7);
+}
+.figuritas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    div{
+        width: .8rem;
+        height: .8rem;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.2);
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.686);
+        }
+    }
+}
+
+.figurota{
+    position: relative;
+    display: grid;
+    place-items: center;
+  
+
+    img{
+        height: 90%;
+        width: 90%;
+        mask-image: linear-gradient(
+            black 80% , transparent
+        );
+    }
+    
+
+}
+.btonActive{
+    background-color: white !important;   
+}

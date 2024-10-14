@@ -56,8 +56,6 @@ export default function Conteiner ({}){
       "travel": "7 years"
     }
     ]
-
-    const img = destinations[0].images.webp;
     function cambios (e){
         let selector = e.target.innerText
         const filtro  = destinations.filter((destino)=> destino.name.toLowerCase() ===  selector.toLowerCase());
