@@ -1,5 +1,8 @@
  
 .reactComponent{
+    a{
+        cursor: pointer;
+    };
     a:hover{
         animation: borderAnimation 0.5s ease-in forwards;
     }
