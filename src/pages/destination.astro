@@ -1,10 +1,13 @@
 ---
     import Mylayout from "../layouts/Mylayout.astro";
     import Conteiner from '../components/Conteiner.jsx';
-    
+    const xd = 'destination'
 ---
 
-<Mylayout title="spaceDestination">
+<Mylayout 
+    title="spaceDestination"
+    xdd={xd}    
+>
 
   <Conteiner client:visible />
    

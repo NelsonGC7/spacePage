@@ -1,9 +1,13 @@
 ---
 import Mylayout from "../layouts/Mylayout.astro";
 import { Conttec } from "../components/Conttec";
+const xd = 'technology'
 ---
 
-<Mylayout title="spaceTecnology">
+<Mylayout 
+    title="spaceTecnology"
+    xdd={xd}
+>
     <Conttec client:visible />
 </Mylayout>
 <style>

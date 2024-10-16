@@ -1,11 +1,15 @@
 ---
 import Mylayout from "../layouts/Mylayout.astro"
 import { Contcrew } from "../components/Contcrew.jsx"
+const xd = 'crew'
 ---
 
 
 
-<Mylayout title="spaceCrew">
+<Mylayout 
+  title="spaceCrew"
+  xdd={xd}
+>
   <Contcrew client:visible />
 </Mylayout>
 <style>

@@ -38,6 +38,9 @@ nav + img{
         height: 2rem;
         margin-bottom: 2rem;
     }
+    .liActive{
+        border-right: solid 6px rgb(255, 255, 255);
+    }
     li{
         font-family: var(--Barlow);
         width: 100%;

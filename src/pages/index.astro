@@ -1,8 +1,13 @@
 ---
 import Mylayout from '../layouts/Mylayout.astro';
+const xd = 'home'
+
 ---
 
-<Mylayout title="FMentor | Space tourism website">
+<Mylayout 
+	title="FMentor | Space tourism website"
+	xdd={xd}
+>
 	<section class="h-[80%] w-full max-w-[25rem] text-white flex flex-col items-center justify-between px-[1.3rem]">
 		<div class="h-[60%] w-full flex flex-col items-center justify-between text-center py-8 ">
 			<h3 class="[font-family:var(--Barlow)] text-xl uppercase" >So, you want to travel to</h3>
@@ -12,7 +17,7 @@ import Mylayout from '../layouts/Mylayout.astro';
 			because we’ll give you a truly out of this world experience!</p>	
 		</div>
 
-		<button class="h-[10rem] w-[10rem] uppercase rounded-full text-black bg-white  transition-all duration-150">Explore</button>	
+		<a  href="/destination" class=" bton h-[10rem] w-[10rem] uppercase rounded-full text-black bg-white  transition-all duration-150 grid place-items-center">Explore</a>	
 	</section>
 
 </Mylayout>
@@ -22,7 +27,7 @@ import Mylayout from '../layouts/Mylayout.astro';
 		background: url(/assets/home/background-home-mobile.jpg) center no-repeat;
 		background-size: cover;
 	}
-	button:hover{
+	.bton:hover{
 		box-shadow:  0 0 0 4rem #ffffff88;
 		color: #2f2e2e88;
 	}
