@@ -55,7 +55,7 @@ export const Conttec = ()=>{
             <figure className="min-h-[37%] w-full">
                 <img className="h-full w-full" src={filters.images.landscape} alt="" />
             </figure>
-            <section className="min-h-[525px] w-full px-6 flex flex-col items-center justify-evenly ">
+            <section className="min-h-[32.8125rem] w-full px-6 flex flex-col items-center justify-evenly ">
                 <figure className="flex flex-row items-center justify-center  gap-4 text-white text-xl">
                    <div className="h-12 w-12 rounded-full border-gray-400 border grid place-items-center  hover:border-white transition duration-300 btonActive" onClick={cambios} >1</div>
                    <div className="h-12 w-12 rounded-full border-gray-400 border grid place-items-center hover:border-white transition duration-300 " onClick={cambios}>2</div>
