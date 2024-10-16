@@ -19,7 +19,7 @@ const { title,xdd } = Astro.props;
         <title>{title}</title>
         <ViewTransitions/>
     </head>
-    <body class=" h-screen w-full min-h-[50rem] max-w-[37.5rem] overflow-hidden ">
+    <body class=" h-full w-full min-h-[60rem] max-w-[40rem] overflow-hidden ">
         <Header  xd={xdd} />
         <slot/>
     </body>
@@ -37,6 +37,7 @@ const { title,xdd } = Astro.props;
         font-family: var(--Bellefair), serif;
         margin:  0 auto;
         overflow: hidden;
+        position: relative;
     }
     
    
