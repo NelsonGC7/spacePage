@@ -14,6 +14,7 @@ const xd = 'technology'
     body{
         background: url(/assets/technology/background-technology-mobileClip.png) center no-repeat;
         background-size: cover;
+        overflow-x: hidden;
     }   
 
 </style>
@@ -21,10 +22,10 @@ const xd = 'technology'
 <script is:inline>
     document.querySelector('img[alt="logo-hamburger"]').addEventListener('click', ()=>{
         document.querySelector('ul').classList.remove('navDeactive')
-        document.querySelector('ul').classList.toggle('navActive');
+        document.querySelector('ul').classList.add('navActive');
     })
     document.querySelector('img[alt="icon-close"]').addEventListener('click', ()=>{
         document.querySelector('ul').classList.remove('navActive')
-        document.querySelector('ul').classList.toggle('navDeactive');
+        document.querySelector('ul').classList.add('navDeactive');
     })
   </script>
