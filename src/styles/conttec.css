@@ -6,3 +6,7 @@
 
 
 }
+.btonActive{
+    background-color: white !important;
+    color: rgb(7, 7, 17);   
+}

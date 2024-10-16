@@ -63,9 +63,9 @@ export function Contcrew () {
   return (
    <section className="h-[88%] w-full  overflow-y-scroll px-6 text-center  flex flex-col items-center z-0  gap-12">
         <div className='min-h-[55%] w-full flex flex-col items-center justify-between'>
-            <h3 className="text-white text-center w-auto  text-[1.2rem] [font-weigth:300]  [font-family:var(--Barlow)] uppercase [letter-spacing:.2rem]"> <strong className="text-gray-400 mr-2">02</strong>Meet your crew</h3>
+            <h3 className="text-white text-center w-auto  text-xl [font-weigth:300]  [font-family:var(--Barlow)] uppercase [letter-spacing:.2rem]"> <strong className="text-gray-400 mr-2">02</strong>Meet your crew</h3>
             <h4 className='text-2xl text-gray-400 uppercase'>{filters.role}</h4>
-            <h1 className='text-3xl text-white uppercase font-ligth'>{filters.name}</h1>
+            <h2 className='text-3xl text-white uppercase font-ligth'>{filters.name}</h2>
             <p className='[font-family:var(--Barlow)] text-[1.2rem]'>{filters.bio}</p>
             <figure className="figuritas">
                 <div onClick={change} className='btonActive' ></div>
