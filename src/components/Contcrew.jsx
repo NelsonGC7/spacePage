@@ -61,7 +61,7 @@ export function Contcrew () {
   }
 
   return (
-   <section className="h-[88%] w-full  overflow-y-scroll px-6 text-center  flex flex-col items-center z-0  gap-12">
+   <section className="h-[88%] w-full  overflow-y-scroll px-6 text-center  flex flex-col items-center z-0  gap-12 pb-5">
         <div className='min-h-[55%] w-full flex flex-col items-center justify-between'>
             <h3 className="text-white text-center w-auto  text-xl [font-weigth:300]  [font-family:var(--Barlow)] uppercase [letter-spacing:.2rem]"> <strong className="text-gray-400 mr-2">02</strong>Meet your crew</h3>
             <h4 className='text-2xl text-gray-400 uppercase'>{filters.role}</h4>

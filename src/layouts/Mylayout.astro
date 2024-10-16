@@ -15,10 +15,11 @@ const { title,xdd } = Astro.props;
         <meta name="viewport" content="width=device-width">
         <link rel="icon" type="image/svg+xml" href="/assets/favicon-32x32.png">
         <meta name="generaton" content={Astro.generator}>
+        <link rel="stylesheet" href="/src/styles/layaout.css">
         <title>{title}</title>
         <ViewTransitions/>
     </head>
-    <body class="h-screen w-screen overflow-hidden ">
+    <body class=" h-screen min-h-[50rem] max-w-[600px] overflow-hidden ">
         <Header  xd={xdd} />
         <slot/>
     </body>
@@ -34,8 +35,7 @@ const { title,xdd } = Astro.props;
     }
     body{
         font-family: var(--Bellefair), serif;
-        margin: 0;
-        padding: 0;
+        margin:  0 auto;
     }
     
    

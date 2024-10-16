@@ -4,7 +4,7 @@ export function Contenido ({ planet,description,distance,time,cambio  }){
 
 
     return(
-        <div className="reactComponent h-auto w-full  flex flex-col items-center pt-6  ">
+        <div className="reactComponent h-auto w-full  flex flex-col items-center pt-6  pb-5 ">
             <nav className="w-full h-[2.5rem]  text-[1rem] uppercase flex  justify-around [letter-spacing:.1rem] [font-family:var(--Barlow)]">
                 <a  onClick={cambio} className="h-full " >moon</a>
                 <a  onClick={cambio} className="h-full ">mars</a>

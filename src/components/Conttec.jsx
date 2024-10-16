@@ -50,7 +50,7 @@ export const Conttec = ()=>{
 
 
     return(
-        <section className="h-[88%] w-full overflow-y-scroll  text-center  flex flex-col items-center">
+        <section className="h-[88%] w-full overflow-y-scroll  text-center  flex flex-col items-center pb-5">
             <h3 className="text-white text-center w-auto  text-[1.2rem] [font-weigth:300]  [font-family:var(--Barlow)] uppercase [letter-spacing:.2rem] mt-4 mb-20"> <strong className="text-gray-400 mr-2">03</strong>Space Launch 101</h3>
             <figure className="min-h-[37%] w-full">
                 <img className="h-full w-full" src={filters.images.landscape} alt="" />
