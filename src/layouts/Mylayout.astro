@@ -19,7 +19,7 @@ const { title,xdd } = Astro.props;
         <title>{title}</title>
         <ViewTransitions/>
     </head>
-    <body class=" h-full w-full min-h-[60rem] max-w-[40rem] overflow-hidden ">
+    <body class=" h-full w-full  overflow-hidden ">
         <Header  xd={xdd} />
         <slot/>
     </body>
@@ -43,5 +43,15 @@ const { title,xdd } = Astro.props;
    
 
 </style>
+<script is:inline>
+    document.querySelector('img[alt="logo-hamburger"]').addEventListener('click', ()=>{
+        document.querySelector('ul').classList.remove('navDeactive')
+        document.querySelector('ul').classList.add('navActive');
+    })
+    document.querySelector('img[alt="icon-close"]').addEventListener('click', ()=>{
+        document.querySelector('ul').classList.remove('navActive')
+        document.querySelector('ul').classList.add('navDeactive');
+    })
+  </script>
 
 
