@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import '../styles/contcrew.css';
   const  crew =[
     {
       "name": "Douglas Hurley",
