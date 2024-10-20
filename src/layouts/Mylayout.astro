@@ -2,24 +2,23 @@
 import Header from "../components/Header.astro";
 import ViewTransitions from "astro/components/ViewTransitions.astro";
 
-const { title,xdd } = Astro.props;
+const { title,xdd,styles } = Astro.props;
 
 
 ---
 
 <!DOCTYPE html>
-<html lang="es" class="overflow-hidden h-[100vh]">
+<html lang="es" class="overflow-hidden h-[100vh] bg-gray-950">
     <head>
         <meta charset="UTF-8">
         <meta name="Description" content="Astro Description">
         <meta name="viewport" content="width=device-width">
         <link rel="icon" type="image/svg+xml" href="/assets/favicon-32x32.png">
         <meta name="generaton" content={Astro.generator}>
-        <link rel="stylesheet" href="/src/styles/layaout.css">
         <title>{title}</title>
         <ViewTransitions/>
     </head>
-    <body class=" h-full w-full  overflow-hidden ">
+    <body class=` h-full w-full  overflow-hidden ${styles} ` >
         <Header  xd={xdd} />
         <slot/>
     </body>
@@ -38,12 +37,13 @@ const { title,xdd } = Astro.props;
         margin:  0 auto;
         overflow: hidden;
         position: relative;
+        color: rgb(13, 12, 35);
     }
     
    
 
 </style>
-<script is:inline>
+<script is:inline >
     document.querySelector('img[alt="logo-hamburger"]').addEventListener('click', ()=>{
         document.querySelector('ul').classList.remove('navDeactive')
         document.querySelector('ul').classList.add('navActive');

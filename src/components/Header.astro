@@ -1,12 +1,15 @@
 ---
-import '../styles/layaout.css'
 const {xd} = Astro.props;
 ---
 
 <header>
-    <img src="/assets/shared/logo.svg" alt="logo space">
+    <img 
+        src="/assets/shared/logo.svg" 
+        alt="logo space"
+        
+>
     <nav>     
-        <ul class="navDeactive">
+        <ul class="navDeactive lg md:relative  md:flex md:left-0  h-[100%]">
             <img src="/assets/shared/icon-close.svg" alt="icon-close">
             <li class={xd === 'home'? 'liActive':null}><strong>00</strong> <a href="/">Home</a></li>
             <li class={xd === 'destination'? 'liActive':null} ><strong>01</strong> <a href="/destination">destination</a></li>
@@ -14,8 +17,193 @@ const {xd} = Astro.props;
             <li class={xd === 'technology'? 'liActive':null}><strong>03</strong>  <a href="/tecnology">Technology</a></li>
         </ul>
     </nav>
-    <img src="/assets/shared/icon-hamburger.svg" alt="logo-hamburger">
+    <img 
+        src="/assets/shared/icon-hamburger.svg" 
+        alt="logo-hamburger"
+        class="md:hidden"
+        >
 </header>
 
 
+<style is:global>
+    header{
+        width: 100%;
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1.3rem;
+        overflow: hidden;
+    }
+
+nav img,
+nav + img{
+    cursor: pointer;
+}
+.navActive{
+    transition: all .5s ease-in-out;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(11, 13, 23, 0.6);
+    backdrop-filter: blur(15px);
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    z-index: 100;
+    text-transform: uppercase;
+    font-size: 22px;
+    transform: translateX(0px);
+    img{
+        width: 2rem;
+        height: 2rem;
+        margin-bottom: 2rem;
+    }
+    .liActive{
+        border-right: solid 6px rgb(255, 255, 255);
+    }
+    li{
+        font-family: var(--Barlow);
+        width: 100%;
+        transition: border 0.3s ease-out;
+        strong{
+            font-weight: 800;
+            margin-right: .6rem;
+        }
+        &:hover{
+            border-right: solid 5px rgba(255, 255, 255, 0.659);
+
+        }
+        
+       
+    }
+}
+.navDeactive{
+    transition: all .5s ease-in-out;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(11, 13, 23, 0.6);
+    backdrop-filter: blur(15px);
+    width: 75%;
+    height: 100%;
+    padding: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    z-index: 100;
+    text-transform: uppercase;
+    font-size: 22px;
+    transform: translateX(100%);
+    img{
+        width: 2rem;
+        height: 2rem;
+        margin-bottom: 2rem;
+    }
+    li{
+        font-family: var(--Barlow);
+        width: 100%;
+        transition: border 0.3s ease-out;
+        strong{
+            font-weight: 800;
+            margin-right: .6rem;
+        }
+        &:hover{
+            border-right: solid 5px rgba(255, 255, 255, 0.659);
+
+        }
+        
+       
+    }
+}
+
+@media(width >=48rem ){
+    header{
+        width: 100%;
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0  0 0 1.3rem;
+        overflow: hidden;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 100%;
+    }
+    
+.navDeactive{
+    transition: all .5s ease-in-out;
+    position: relative;
+    background-color: rgba(15, 17, 31, 0.811);
+    backdrop-filter: blur(15px);
+    width:100% ;
+    height: 100%;
+    flex-basis: ;
+    flex-direction: row;
+    padding: 0;
+    color: white;
+    display: flex;
+    justify-content: right;
+    padding-right: 6%;
+    text-transform: uppercase;
+    font-size: 22px;
+    transform: translateX(0px);
+    img{
+        display: none;
+
+    }
+    .liActive{
+        border-bottom: solid 6px rgb(255, 255, 255);
+       
+    }
+    li{
+        font-family: var(--Barlow);
+        width: fit-content;
+        height: 100%;
+        transition: border 0.3s ease-out;
+        display: flex;
+        align-items: center;
+        font-weight: 200;
+        border-bottom: transparent solid 6px;
+        strong{
+            font-weight: 700;
+            margin-right: .6rem;
+        }
+        &:hover{
+            animation: cambiarColorBorde 0.5s ease-in forwards;
+            border-right: none;
+        }
+        
+       
+    }
+
+    }
+
+}
+
+@keyframes cambiarColorBorde {
+    0% {
+        border-color: gray;
+    }
+    100% {
+        border-color: white;
+    }
+}
+
+</style>
 

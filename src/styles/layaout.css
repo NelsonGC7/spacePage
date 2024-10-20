@@ -18,7 +18,7 @@ nav + img{
     position: absolute;
     top: 0;
     right: 0;
-    background-color: rgba(11, 13, 23, 0.6);
+    background-color: rgba(15, 16, 16, 0.6);
     backdrop-filter: blur(15px);
     width: 80%;
     height: 100%;

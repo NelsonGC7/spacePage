@@ -6,7 +6,8 @@
 
 <Mylayout 
     title="spaceDestination"
-    xdd={xd}    
+    xdd={xd}
+    styles="bg-imgCel2 md:bg-imgTab2 lg:bg-imgPc2 "  
 >
 
   <Conteiner client:visible />
@@ -15,10 +16,11 @@
 
 <style>
     body{
-        background: url(/assets/destination/background-destination-mobile.jpg) center no-repeat;
+        background: center no-repeat;
         background-size: cover;
         overflow-x: hidden;
     }
+    
 </style>
 <script is:inline>
     document.querySelector('img[alt="logo-hamburger"]').addEventListener('click', ()=>{
