@@ -62,13 +62,18 @@ export function Contcrew () {
   }
 
   return (
-   <section className="h-[88%] w-full  overflow-y-scroll px-6 text-center  flex flex-col items-center z-0  gap-12 pb-5">
-        <div className='min-h-[55%] w-full flex flex-col items-center justify-between'>
-            <h3 className="text-white text-center w-auto  text-xl [font-weigth:300]  [font-family:var(--Barlow)] uppercase [letter-spacing:.2rem]"> <strong className="text-gray-400 mr-2">02</strong>Meet your crew</h3>
-            <h4 className='text-2xl text-gray-400 uppercase'>{filters.role}</h4>
-            <h2 className='text-3xl text-white uppercase font-ligth '>{filters.name}</h2>
-            <p className='[font-family:var(--Barlow)] text-[1.2rem]  text-gray-300'>{filters.bio}</p>
-            <figure className="figuritas">
+   <section className="h-[88%] w-full  overflow-y-scroll px-6 text-center  flex flex-col items-center z-0  gap-12 pb-5 
+    lg:flex-row lg:text-start lg:px-[12%]
+   ">
+        <div className='min-h-[55%] lg:min-h-[80%] w-full flex flex-col items-center justify-between md:mt-4 lg:w-[50%] '>
+            <h3 className="text-white text-center w-auto  text-xl [font-weigth:300]  [font-family:var(--Barlow)] 
+            uppercase [letter-spacing:.2rem] md:w-full md:text-start">
+               <strong className="text-gray-400 mr-2">02</strong>Meet your crew</h3>
+            <h4 className='text-2xl lg:text-4xl text-gray-400 uppercase lg:w-full lg:text-start '>{filters.role}</h4>
+            <h2 className='text-3xl lg:text-5xl text-white uppercase font-ligth lg:text-start lg:w-full '>{filters.name}</h2>
+            <p className='[font-family:var(--Barlow)] text-[1.2rem]  text-gray-300
+             md:w-[75%] lg:w-[100%]'>{filters.bio}</p>
+            <figure className="figuritas md:w-16">
                 <div onClick={change} className='btonActive' ></div>
                 <div onClick={change}></div>
                 <div onClick={change}></div>

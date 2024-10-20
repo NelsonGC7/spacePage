@@ -63,9 +63,13 @@ export default function Conteiner ({}){
     }
     return(
         
-    <section className="h-[88%] w-full text-white overflow-y-scroll px-6 pb-5 ">
-        <div className="h-1/2 flex flex-col items-center justify-around">
-            <h1 className="text-white text-center w-auto  text-xl [font-weigth:300]  [font-family:var(--Barlow)] uppercase [letter-spacing:.2rem]"> <strong className="text-gray-400">01</strong> Pick your destination</h1>
+    <section className="h-[88%] w-full text-white overflow-y-scroll px-6 pb-5 md:px-5 ">
+        <div className="h-1/2 flex w-full flex-col items-center justify-around]">
+            <h1 className="text-white text-center w-auto  text-xl [font-weigth:300]
+              [font-family:var(--Barlow)] uppercase [letter-spacing:.2rem] md:w-full md:text-start md:pl-2
+             ">
+               <strong className="text-gray-400">01</strong> Pick your destination
+            </h1>
             <figure className="w-48">
                 <img src={filtros[0].images.png} alt=""/>
             </figure>
